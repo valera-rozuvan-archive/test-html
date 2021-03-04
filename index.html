@@ -57,9 +57,12 @@
 
         ctx = canvas.getContext('2d');
 
-        window.onresize = screenChange
+        // window.onresize = screenChange
         window.addEventListener('orientationchange', screenChange);
-        screen.addEventListener('orientationchange', screenChange);
+        window.addEventListener('resize', screenChange);
+        if (screen && screen.addEventListener) {
+          screen.addEventListener('orientationchange', screenChange);
+        }
 
         fadeOut();
       })
