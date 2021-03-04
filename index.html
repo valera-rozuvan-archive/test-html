@@ -56,13 +56,16 @@
 
         ctx = canvas.getContext('2d');
 
-        window.onresize = function () {
-          updateDimensions()
-          updateCanvasSize()
-        };
+        window.onresize = screenChange
+        window.addEventListener('orientationchange', screenChange);
 
         fadeOut();
       })
+
+      function screenChange() {
+        updateDimensions()
+        updateCanvasSize()
+      }
 
       function updateCanvasSize() {
         canvas.width = width
