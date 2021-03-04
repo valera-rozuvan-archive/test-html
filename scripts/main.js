@@ -3,12 +3,9 @@ requirejs.config({
   paths: {},
 });
 
-requirejs(['ready'], function (ready) {
+requirejs(['ready', 'preact', 'app', 'stopLoader'], function (ready, preact, app, stopLoader) {
   ready(function () {
-    console.log('Hello, world!')
-
-    if (window.__stop_loader) {
-      window.__stop_loader()
-    }
+    app(preact);
+    stopLoader();
   })
 })

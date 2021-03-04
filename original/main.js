@@ -21,6 +21,7 @@
   let fontSize
   let x_squares
   let y_squares
+  let callback
 
   ready(function () {
     updateDimensions()
@@ -37,7 +38,8 @@
       screen.addEventListener('orientationchange', screenChange);
     }
 
-    window.__stop_loader = function () {
+    window.__stop_loader = function (_callback) {
+      callback = _callback
       alpha = 1
     }
 
@@ -102,6 +104,8 @@
       clearScreen()
 
       canvas.parentNode.removeChild(canvas);
+
+      callback()
 
       return;
     }
