@@ -1,11 +1,13 @@
-requirejs.config({
-  baseUrl: 'scripts/',
-  paths: {},
-});
+(function () {
+  requirejs.config({
+    baseUrl: 'scripts/',
+    paths: {},
+  });
 
-requirejs(['ready', 'preact', 'app', 'stopLoader'], function (ready, preact, app, stopLoader) {
-  ready(function () {
-    app(preact);
-    stopLoader();
+  requirejs(['ready', 'initApp', 'stopLoader'], function (ready, initApp, stopLoader) {
+    ready(function () {
+      initApp();
+      stopLoader();
+    })
   })
-})
+})()
