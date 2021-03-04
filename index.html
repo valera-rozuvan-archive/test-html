@@ -4,7 +4,7 @@
 
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+  <meta name="viewport" content="initial-scale=1, maximum-scale=1" />
   <title>Test HTML</title>
   <style>
     *,
@@ -68,8 +68,10 @@
       })
 
       function screenChange() {
-        updateDimensions()
-        updateCanvasSize()
+        window.setTimeout(() => {
+          updateDimensions()
+          updateCanvasSize()
+        }, 100)
       }
 
       function updateCanvasSize() {
