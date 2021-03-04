@@ -95,13 +95,6 @@
         }, 100)
       }
 
-      function updateCanvasSize() {
-        canvas.width = width
-        canvas.height = height
-        canvas.style.width = `${width}px`;
-        canvas.style.height = `${height}px`;
-      }
-
       function updateDimensions() {
         width = window.innerWidth || document.documentElement.clientWidth ||
           document.body.clientWidth;
@@ -113,6 +106,13 @@
 
         x_squares = Math.ceil(width / squareSize)
         y_squares = Math.ceil(height / squareSize)
+      }
+
+      function updateCanvasSize() {
+        canvas.width = width
+        canvas.height = height
+        canvas.style.width = `${width}px`;
+        canvas.style.height = `${height}px`;
       }
 
       function ready(callbackFunc) {
