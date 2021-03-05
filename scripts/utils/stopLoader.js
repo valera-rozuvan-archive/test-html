@@ -6,7 +6,7 @@ define(function () {
       window.clearInterval(interval)
 
       window.__stop_loader(function () {
-        console.log('Done!')
+        console.log('Loader is no more!')
       })
     }
   }
