@@ -1,7 +1,7 @@
-(function () {
+define(function () {
   let interval = null
 
-  function tryToStopLoader() {
+  const tryToStopLoader = function () {
     if (window.__stop_loader) {
       window.clearInterval(interval)
 
@@ -11,11 +11,9 @@
     }
   }
 
-  function stopLoader() {
+  const stopLoader = function () {
     interval = window.setInterval(tryToStopLoader, 10)
   }
 
-  define(function () {
-    return stopLoader
-  })
-})()
+  return stopLoader
+})
