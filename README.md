@@ -20,3 +20,5 @@ npm install uglify-js -g
   - possibly use [html-minifier](https://www.npmjs.com/package/html-minifier)
 - use an easing function for fadeout animation
   - see [examples](https://easings.net/) of easing functions
+- load CSS dynamically using
+  - possibly use [loadCSS](https://github.com/filamentgroup/loadCSS)
