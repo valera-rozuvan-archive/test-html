@@ -1,5 +1,11 @@
 # test-html
 
+## wip has moved
+
+Future work on this repository has moved to the monorepo [valera-rozuvan/experiments](https://github.com/valera-rozuvan/experiments). This repo is archived for historic purposes (to preserve commit history). Navigate over to [experiments/test-html](https://github.com/valera-rozuvan/experiments/tree/main/test-html) to see updates (if any).
+
+## introduction
+
 test-html
 
 ## Setup
